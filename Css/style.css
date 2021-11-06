@@ -1,4 +1,224 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --backroung-color: #F2F2F2;
+    --main-color:#0065FC;
+    --secondary-color: #DEEBFF;
+    --secondary-colorb: #d9d9d9;
+  }
+body {
+    font-family: 'Raleway';
+    font-size: 14px;
+    max-width: 2880px;
+}
+a {
+    color: #202020;
+    text-decoration: none;
+}
+h1 {
+    font-size: 140%;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+#mainContent { 
+    max-width: 2880px;
+    padding: 2.0835%;
+    margin: 1.7365%;
+}
 
+
+/* header */
+
+#headerTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    padding: 25px 15px;
+}
+nav ul li a.activeMenu {
+    border-top: 2px solid var(--main-color);
+}
+
+
+/*search bar*/
+
+#searchForm {
+    padding: 15px 0px 20px 0;
+}
+#searchForm i {
+    padding: 15px;
+}
+#seachForm input {
+    border: none;
+    font-weight: bold;
+    padding: 15px;
+}
+input.rounded-blue {
+    background: var(--main-color);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+}
+
+
+
+/* SECTION */
+
+/*Filters*/
+
+i.round {
+    background: var(--secondary-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    padding: 15px;
+    z-index: 1;
+}
+i.small-round {
+    border: 1px solid var(--secondary-colorb);
+    border-radius: 50%;
+    color: var(--main-color);
+    padding: 5px 10px;
+}
+#filters {
+    display: flex;
+    padding: 10px 0px 20px 0px;
+}
+#filters .btn {
+    border-radius: 30px;
+    border: 2px solid var(--secondary-colorb);
+    font-weight: bold;
+    margin-left: -40px;
+    padding-left: 55px;
+    padding-right: 15px;
+    z-index: 0;
+}
+#filter data {
+    padding-left: 15px;
+}
+#filters div {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 15px;
+}
+#filters span {
+    font-weight: bold;
+    padding: 30px 15px 30px 0px;
+}
+
+
+/* Results containers */
+
+.card-container {
+    display: flex;
+}
+#results-containers {
+   display: flex;
+   flex-direction: column;
+}
+#results-containers>div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+#results-containers>div>div {
+    display: flex;
+    flex-direction: column;
+    padding: 2.2167%;
+}
+#plus-populaires {
+    width: 35.3185%;
+}
+#plus-populaires .card-container {
+    flex-direction: column; 
+}
+#plus-populaires>div:first-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#plus-populaires div:first-child h2 {
+    padding: 3.84%
+}
+#plus-populaires>div:first-child i {
+    margin: auto 0;
+}
+#plus-populaires .card {
+    /*width: 23.9585vw;*/
+    width: 100%;
+    margin-bottom: 8.095%;
+}
+#plus-populaires .card a {
+    display: flex;
+    flex-wrap: nowrap;
+}
+#plus-populaires .card-image {
+    max-height: 268px;
+    width: 8.75vw;
+    height: calc(8.75vw * 1.0634920635); /* le longueur multiplié par le ratio original (268 hauter /252 longueur)*/
+    flex: none;
+}
+#plus-populaires .card-image img {
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+
+#hebergements h2 {
+    padding: 1.84%;
+}
+#hebergements .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-between;
+}
+#hebergements .card {
+    width: 28.391%;
+    margin-bottom: 3.477%;
+}
+#hebergements .card-image {
+    max-height: 230px;
+    /*height: 7.9865vw;*/
+    height: calc(16.3195vw * 0.489361702); /* dividir alto por ancho y multiplicar para mantener relación de aspecto*/
+    width: 100%;
+}
+#hebergements .card-image img {
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}
+
+/* Cards */
+
+.card {
+    border-radius: 1vw;
+    -webkit-box-shadow: 3px 4px 35px 2px #c4c4c4; 
+    box-shadow: 3px 4px 35px 2px #c4c4c4;
+    display: block;
+    padding: 0.3vw;
+}
+.card-body {
+    display: block;
+    padding: 0 5%;
+    padding-bottom: 3%;
+    line-height: 1;
+}
+.card-image img {
+    object-fit: cover;
+}
+
+.card-stars i {
+    color: var(--secondary-colorb);
+}
+.card-stars i.active {
+    color: var(--main-color);
+}
