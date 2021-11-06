@@ -17,7 +17,7 @@ a {
     text-decoration: none;
 }
 h1 {
-    font-size: 140%;
+    font-size: 1.6vw;
 }
 img {
     height: 100%;
@@ -123,14 +123,11 @@ i.small-round {
     display: flex;
 }
 #results-containers {
-   display: flex;
-   flex-direction: column;
-}
-#results-containers>div {
     display: flex;
     flex-direction: row-reverse;
+    width: 100%;
 }
-#results-containers>div>div {
+#results-containers>div {
     display: flex;
     flex-direction: column;
     padding: 2.2167%;
@@ -148,14 +145,16 @@ i.small-round {
     justify-content: space-between;
 }
 #plus-populaires div:first-child h2 {
-    padding: 3.84%
+    /*padding: 3.84% 0;*/
+    padding: 4.954% 0;
+    margin: 5.653% 0;
 }
 #plus-populaires>div:first-child i {
     margin: auto 0;
 }
 #plus-populaires .card {
-    /*width: 23.9585vw;*/
-    width: 100%;
+    width: 23.9585vw;
+    /*width: 100%;*/
     margin-bottom: 8.095%;
 }
 #plus-populaires .card a {
@@ -172,19 +171,29 @@ i.small-round {
     border-top-left-radius: 1vw;
     border-bottom-left-radius: 1vw;
 }
-
+#plus-populaires .card-body {
+    position: relative;
+}
+#plus-populaires .card-stars {
+    position: absolute;
+    bottom: 8.095%;
+}
 
 #hebergements h2 {
     padding: 1.84%;
+    font-size: 1.6vw;
+    margin-left: 1%;
 }
+
 #hebergements .card-container {
     flex-direction: row;
     flex-wrap: wrap;  
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #hebergements .card {
-    width: 28.391%;
+    /*width: 28.861%; width: 28.155%;*/
     margin-bottom: 3.477%;
+    width: 28.3715%;
 }
 #hebergements .card-image {
     max-height: 230px;
@@ -212,10 +221,19 @@ i.small-round {
     padding-bottom: 3%;
     line-height: 1;
 }
+.card-title h3 {
+    font-size: 1.2vw;
+    margin-bottom: 0;
+}
 .card-image img {
     object-fit: cover;
 }
-
+.card-description {
+    font-size: 1vw;
+}
+.card-stars {
+    font-size: 0.7vw;
+}
 .card-stars i {
     color: var(--secondary-colorb);
 }
