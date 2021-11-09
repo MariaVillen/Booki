@@ -7,17 +7,21 @@
     --secondary-color: #DEEBFF;
     --secondary-colorb: #d9d9d9;
   }
+
 body {
     font-family: 'Raleway';
-    font-size: 14px;
     max-width: 2880px;
+    font-size: 0.92vw; /* 30.400px sur 2880px */
+}
+section {
+    margin-bottom: 8%;
 }
 a {
     color: #202020;
     text-decoration: none;
 }
 h1 {
-    font-size: 1.6vw;
+    font-size: 1.35vw; /*44px sur 2880px */
 }
 img {
     height: 100%;
@@ -40,34 +44,41 @@ li {
     flex-direction: row;
     justify-content: space-between;
 }
+#logo img {
+    object-fit: contain;
+    width: 6vw;
+}
+#header-description {
+    margin: 2% auto 1% auto;
+}
 nav ul li {
     display: inline;
 }
 nav ul li a {
     padding: 25px 15px;
+    padding-top: 3.542vw; /* 102.10 px sur 2880px */
 }
 nav ul li a.activeMenu {
-    border-top: 2px solid var(--main-color);
+    border-top: 4px solid var(--main-color);
 }
-
 
 /*search bar*/
 
 #searchForm {
-    padding: 15px 0px 20px 0;
+    padding: 0.6vw;
 }
 #searchForm i {
     padding: 15px;
 }
-#seachForm input {
+#searchForm input {
     border: none;
     font-weight: bold;
-    padding: 15px;
+    padding: 1.2vw;
 }
 input.rounded-blue {
     background: var(--main-color);
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
+    border-bottom-right-radius: 1vw;
+    border-top-right-radius: 1vw;
     color: white;
 }
 
@@ -81,8 +92,9 @@ i.round {
     background: var(--secondary-color);
     border-radius: 50%;
     color: var(--main-color);
-    padding: 15px;
+    padding: 1vw;
     z-index: 1;
+    font-size: 1.2vw;
 }
 i.small-round {
     border: 1px solid var(--secondary-colorb);
@@ -93,14 +105,16 @@ i.small-round {
 #filters {
     display: flex;
     padding: 10px 0px 20px 0px;
+    align-items: center;
+    font-weight: bolder;
 }
 #filters .btn {
-    border-radius: 30px;
+    font-weight: bolder;
+    border-radius: 2vw;
     border: 2px solid var(--secondary-colorb);
-    font-weight: bold;
-    margin-left: -40px;
-    padding-left: 55px;
-    padding-right: 15px;
+    margin-left: -3vw;
+    padding-left: 4vw;
+    padding-right: 1vw;
     z-index: 0;
 }
 #filter data {
@@ -110,12 +124,15 @@ i.small-round {
     display: flex;
     flex-wrap: nowrap;
     padding: 15px;
-}
-#filters span {
-    font-weight: bold;
-    padding: 30px 15px 30px 0px;
+    margin-right: 1.5vh;
 }
 
+#filters span {
+    margin-right: 2vw;
+}
+#search .info {
+ margin: 1vw 0;
+}
 
 /* Results containers */
 
@@ -179,15 +196,23 @@ i.small-round {
     bottom: 8.095%;
 }
 
+div#hebergements {
+    margin-right: 2%;
+    padding: 2vw;
+    padding-left: 0;
+    justify-content: space-between;
+    
+}
+
 #hebergements h2 {
     padding: 1.84%;
     font-size: 1.6vw;
     margin-left: 1%;
+    
 }
 
 #hebergements .card-container {
-    flex-direction: row;
-    flex-wrap: wrap;  
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 #hebergements .card {
@@ -204,6 +229,18 @@ i.small-round {
 #hebergements .card-image img {
     border-top-left-radius: 1vw;
     border-top-right-radius: 1vw;
+}
+#hebergements .card-body {
+    line-height: 0.5vw;
+}
+#hebergements .card-body h2 {
+    line-height: 1;
+    margin: 15px0 0 0;
+}
+#hebergements .card-footer a {
+    margin-left: 3%;
+    font-weight: bolder;
+    font-size: 1.2vw;
 }
 
 /* Cards */
@@ -239,4 +276,58 @@ i.small-round {
 }
 .card-stars i.active {
     color: var(--main-color);
+}
+
+#activites {
+    max-width: 100%;
+    margin-bottom: 5%;
+}
+
+#activites .card-container {
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 30.764vw; /*886px en 2880px*/
+}
+#activites div.activiteCard {
+    width: 25%;
+    height: 40%;
+    padding: 1%;
+    margin: 0;
+    border-radius:1.0417vw;
+}
+
+
+#activites div.activiteCard div  {
+    margin: 1vw;
+    font-weight: bolder;
+}
+#activites div.activiteCard:nth-child(3n+1) {
+    height: 100%;
+}
+#activites img {
+    object-fit: cover;
+    border-top-left-radius: 1.0417vw;
+    border-top-right-radius: 1.0417vw;
+}
+
+footer {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    margin: 3% 0;
+}
+
+
+footer div h2 {
+    font-weight: bolder;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer div li {
+    font-size: 1vw;
+    line-height: 2vw;
+    padding-left: 0;
 }

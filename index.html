@@ -18,7 +18,7 @@
         <header>
             <div id="headerTop">
                 <div id="logo">
-                    <img srcset="./assets/logo/booki.png 480w,
+                    <img srcset="./assets/logo/booki.png 1x,
                     ./assets/logo/booki@3x.png 3x"
                     src="./assets/logo/Booki.png"
                     alt="Booki Logo">
@@ -34,7 +34,7 @@
                     </ul>
                 </nav>
             </div>
-            <div>
+            <div id="header-description">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
@@ -42,7 +42,7 @@
 
         <section>
             <div id="search">
-                <form id="seachForm">
+                <form id="searchForm">
                     <i class="fas fa-map-marker-alt"></i>
                     <input type="text" value="Marseille, France"/>
                     <input type="submit" class="rounded-blue" value="Rechercher"/>
@@ -69,7 +69,7 @@
                         
                         
                 </div>
-                 <div>
+                 <div class="info">
                    <i class="fas fa-info small-round"></i>
                     <data>Plus de <span>500</span> logements sont disponibles dans cette ville</data>
                 </div>
@@ -342,13 +342,14 @@
                             </a>
                         </div>
                     </div>    
+                    <div class="card-footer"><a href="#">Afficher plus</a></div>
                 </div>
             </div>
-            
+
             <div id="activites">
                 <h2>Activités à Marseille</h2>
                 <div class="card-container">
-                        <figure>
+                        <div class="activiteCard">
                             <img srcset="
                             ./Assets/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg 702w,
                             ./Assets/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg 1404w,
@@ -357,9 +358,9 @@
                             "
                             src="./Assets/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
                             alt="View Port">
-                            <figcaption>View Port</figcaption>
-                        </figure>
-                        <figure>
+                            <div>View Port</div>
+                        </div>
+                        <div class="activiteCard">
                             <img srcset="
                             ./Assets/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg 356w,
                             ./Assets/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg 711w,
@@ -368,9 +369,9 @@
                             "
                             src="./Assets/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
                             alt="Fort de Pomégues">
-                            <figcaption>Fort de Pomégues</figcaption>
-                        </figure>
-                        <figure>
+                            <div>Fort de Pomégues</div>
+                        </div>
+                        <div class="activiteCard">
                             
                             <img srcset="
                             ./Assets/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg 648w,
@@ -380,9 +381,9 @@
                             "
                             src="./Assets/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
                             alt="Îles du Frioul">
-                            <figcaption>Îles du Frioul</figcaption>
-                        </figure>
-                        <figure>
+                            <div>Îles du Frioul</div>
+                        </div>
+                        <div class="activiteCard">
                         
                             <img srcset="
                             ./Assets/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg 606w,
@@ -392,9 +393,9 @@
                             "
                             src="./Assets/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
                             alt="Parc National des Calanques">
-                            <figcaption>Parc National des Calanques</figcaption>
-                        </figure>
-                        <figure>
+                            <div>Parc National des Calanques</div>
+                        </div>
+                        <div class="activiteCard">
                         
                             <img srcset="
                             ./Assets/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg 589w,
@@ -404,9 +405,9 @@
                             "
                             src="./Assets/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg"
                             alt="Notre-Dame-de-la-Garde">
-                            <figcaption>Notre-Dame-de-la-Garde</figcaption>
-                        </figure>
-                        <figure>
+                            <div>Notre-Dame-de-la-Garde</div>
+                        </div>
+                        <div class="activiteCard">
                             <img srcset="
                             ./Assets/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg 504w,
                             ./Assets/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg 1008w,
@@ -415,8 +416,8 @@
                             "
                             src="./Assets/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
                             alt="Parc Longchamp">
-                            <figcaption>Parc Longchamp</figcaption>
-                        </figure>
+                            <div>Parc Longchamp</div>
+                        </div>
                 </div>   
             </div>
            
