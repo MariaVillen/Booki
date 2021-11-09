@@ -56,7 +56,7 @@ nav ul li {
 }
 nav ul li a {
     padding: 25px 15px;
-    padding-top: 3.542vw; /* 102.10 px sur 2880px */
+    padding-top: 3.542vw; 
 }
 nav ul li a.activeMenu {
     border-top: 4px solid var(--main-color);
@@ -68,7 +68,7 @@ nav ul li a.activeMenu {
     padding: 0.6vw;
 }
 #searchForm i {
-    padding: 15px;
+    padding: 1vw;
 }
 #searchForm input {
     border: none;
@@ -117,7 +117,7 @@ i.small-round {
     padding-right: 1vw;
     z-index: 0;
 }
-#filter data {
+#filter span {
     padding-left: 15px;
 }
 #filters div {
@@ -132,6 +132,59 @@ i.small-round {
 }
 #search .info {
  margin: 1vw 0;
+}
+
+
+/* Cards */
+
+.card {
+    border-radius: 1vw;
+    box-shadow: 3px 4px 35px 2px #c4c4c4;
+    display: block;
+    padding: 0.3vw;
+}
+.card-body {
+    display: block;
+    padding: 0 5%;
+    padding-bottom: 3%;
+    line-height: 1;
+}
+.card-header { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.card-header h2 {
+    padding: 4.954% 0;
+    margin: 5.653% 0;
+}
+.card-header i {
+        margin: auto 0;
+}
+.card-title h3 {
+    font-size: 1.2vw;
+    margin-bottom: 0;
+}
+.card-image img {
+    object-fit: cover;
+}
+.card-description {
+    font-size: 1vw;
+}
+.card-stars {
+    font-size: 0.7vw;
+}
+.card-stars i {
+    color: var(--secondary-colorb);
+}
+.card-stars i.active {
+    color: var(--main-color);
+}
+.card-footer {
+    align-self: end;
+    margin-top: auto;
+    width: 100%;
 }
 
 /* Results containers */
@@ -149,29 +202,18 @@ i.small-round {
     flex-direction: column;
     padding: 2.2167%;
 }
+
+
+/* plus populaires*/
+
 #plus-populaires {
     width: 35.3185%;
 }
 #plus-populaires .card-container {
     flex-direction: column; 
 }
-#plus-populaires>div:first-child {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-#plus-populaires div:first-child h2 {
-    /*padding: 3.84% 0;*/
-    padding: 4.954% 0;
-    margin: 5.653% 0;
-}
-#plus-populaires>div:first-child i {
-    margin: auto 0;
-}
 #plus-populaires .card {
     width: 23.9585vw;
-    /*width: 100%;*/
     margin-bottom: 8.095%;
 }
 #plus-populaires .card a {
@@ -196,21 +238,18 @@ i.small-round {
     bottom: 8.095%;
 }
 
-div#hebergements {
-    margin-right: 2%;
-    padding: 2vw;
-    padding-left: 0;
-    justify-content: space-between;
-    
-}
 
+/* Hebergements */
+
+#results-containers #hebergements {
+    margin-right: 2%;
+    padding-left: 0;
+}
 #hebergements h2 {
     padding: 1.84%;
     font-size: 1.6vw;
     margin-left: 1%;
-    
 }
-
 #hebergements .card-container {
     flex-flow: row wrap;
     justify-content: space-around;
@@ -235,7 +274,7 @@ div#hebergements {
 }
 #hebergements .card-body h2 {
     line-height: 1;
-    margin: 15px0 0 0;
+    margin: 15px 0 0 0;
 }
 #hebergements .card-footer a {
     margin-left: 3%;
@@ -243,89 +282,54 @@ div#hebergements {
     font-size: 1.2vw;
 }
 
-/* Cards */
+/* Activites */
 
-.card {
-    border-radius: 1vw;
-    -webkit-box-shadow: 3px 4px 35px 2px #c4c4c4; 
-    box-shadow: 3px 4px 35px 2px #c4c4c4;
-    display: block;
-    padding: 0.3vw;
-}
-.card-body {
-    display: block;
-    padding: 0 5%;
-    padding-bottom: 3%;
-    line-height: 1;
-}
-.card-title h3 {
-    font-size: 1.2vw;
-    margin-bottom: 0;
-}
-.card-image img {
-    object-fit: cover;
-}
-.card-description {
-    font-size: 1vw;
-}
-.card-stars {
-    font-size: 0.7vw;
-}
-.card-stars i {
-    color: var(--secondary-colorb);
-}
-.card-stars i.active {
-    color: var(--main-color);
-}
 
 #activites {
     max-width: 100%;
     margin-bottom: 5%;
 }
-
 #activites .card-container {
     flex-flow: column wrap;
     justify-content: space-between;
-    height: 30.764vw; /*886px en 2880px*/
+    height: 30.764vw; 
 }
-#activites div.activiteCard {
+#activites .activiteCard {
     width: 25%;
-    height: 40%;
+    height: 50%;
     padding: 1%;
     margin: 0;
     border-radius:1.0417vw;
+    display: flex;
+    flex-flow: column nowrap;
 }
-
-
-#activites div.activiteCard div  {
+#activites .activiteCard p  {
     margin: 1vw;
     font-weight: bolder;
 }
-#activites div.activiteCard:nth-child(3n+1) {
+#activites .activiteCard:nth-child(3n+1) {
     height: 100%;
 }
 #activites img {
     object-fit: cover;
     border-top-left-radius: 1.0417vw;
     border-top-right-radius: 1.0417vw;
+    min-height: 0;
+    flex: 1 1 0;
 }
-
+/* footer*/
 footer {
     display: flex;
     width: 75%;
     justify-content: space-between;
     margin: 3% 0;
 }
-
-
 footer div h2 {
     font-weight: bolder;
 }
-
 footer ul {
     padding-left: 0;
 }
-
 footer div li {
     font-size: 1vw;
     line-height: 2vw;
