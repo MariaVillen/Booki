@@ -55,17 +55,20 @@ li {
 }
 nav ul li {
     display: inline;
+    padding-top: 3.542vw; 
+}
+nav ul .activeMenu {
+    border-top: 2px solid var(--main-color);
 }
 nav ul li a {
     padding: 25px 15px;
-    padding-top: 3.542vw; 
 }
-nav ul li a.activeMenu {
-    border-top: 2px solid var(--main-color);
+nav ul .activeMenu a {
     color: var(--main-color);
 }
 
 /*search bar*/
+
 
 #searchForm {
     padding: 0.6vw;
@@ -78,14 +81,22 @@ nav ul li a.activeMenu {
     font-weight: bold;
     padding: 1.2vw;
 }
-input.rounded-blue {
+#searchForm .rounded-blue {
+    display: inline;
+}
+#searchForm .rounded-blue input, #searchForm .rounded-blue i {
     background: var(--main-color);
-    border-bottom-right-radius: 1vw;
-    border-top-right-radius: 1vw;
     color: white;
 }
-
-
+#searchForm .rounded-blue input {
+    border-bottom-right-radius: 1vw;
+    border-top-right-radius: 1vw;       
+}
+#searchForm .rounded-blue i {
+    padding: 2vw;
+    border-radius: 2vw;
+    display: none;
+}
 
 /* SECTION */
 
@@ -121,17 +132,17 @@ i.small-round {
     padding-right: 1vw;
     z-index: 0;
 }
-#filter span {
+#filters span {
     padding-left: 15px;
+    margin-right: 2vw;
 }
-#filters div {
+#filters .tag-filtre {
     display: flex;
     flex-wrap: nowrap;
     margin-right: 1.5vh;
 }
-
-#filters span {
-    margin-right: 2vw;
+#filters .tag-menu {
+    display: flex;
 }
 #search .info {
  margin: 1vw 0;
@@ -337,3 +348,112 @@ footer div li {
     line-height: 2vw;
     padding-left: 0;
 }
+
+
+
+
+/*oncernant les breakpoints, nous avons convenu avec le client
+d’utiliser 992 px et 768 px.
+992 px pour les écrans d’ordinateurs et 768 px pour les tablettes, et
+tout ce qui est en dessous de 768 pour les téléphones portables.
+*/
+@media (max-width: 768px) {
+
+
+    body {
+        font-size: 2.7vw;
+    }
+
+    /* header */
+
+    #headerTop {
+    display: block;
+    text-align: center;
+    }
+    #logo img {
+        width: 25.5%;
+    }
+    nav ul {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font-size: 4vw;
+    }
+    nav ul li {
+        padding: initial;
+        flex-grow: 0.2;
+        padding: 2vw;
+    }
+    nav ul .activeMenu {
+        border-bottom: 3px solid var(--main-color);
+        border-top: none;
+    }
+
+    #header-description {
+        margin: 10% 5%;
+        font-size: 4vw;
+    }
+    #header-description h1 {
+        font-size: 5vw;
+    }
+
+    /*search*/
+    #search {
+        font-size: 3vw;
+        text-align: center;
+    }
+    #searchForm .rounded-blue i {
+        display: initial;
+    }
+    #searchForm .rounded-blue input {
+        display: none;
+    }
+
+    /* Filters */
+
+    #filters {
+        display: block;
+        text-align: left;
+    }
+    #filters .tag-menu {
+        flex-wrap: wrap;
+    }
+    #filters .tag-filtre {
+        margin: 2vw;
+    }
+    #filters i {
+    font-size: 3vw;
+    padding: 3vw;
+    }
+    #filters .btn {
+    border-radius: 5vw;
+    margin-left: -6vw;
+    padding-left: 6vw;
+    padding-right: 3vw;
+    }
+
+    #results-containers, 
+    #hebergements .card-container,
+    #plus-populaires .card-container,
+    #activites .card-container,
+    #results-containers>div,
+    #plus-populaires, 
+    #activites, 
+    footer {
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+    #activites .card-container {
+        height: auto;
+    }
+    #plus-populaires .card {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+
+} 

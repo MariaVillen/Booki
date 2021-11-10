@@ -25,8 +25,8 @@
                 </div>
                 <nav>
                     <ul>
-                        <li>
-                            <a href="#hebergements" class="activeMenu">Hébergements</a>
+                        <li class="activeMenu">
+                            <a href="#hebergements">Hébergements</a>
                         </li>
                         <li>
                             <a href="#activites">Activités</a>
@@ -45,28 +45,32 @@
                 <form id="searchForm">
                     <i class="fas fa-map-marker-alt"></i>
                     <input type="text" value="Marseille, France"/>
-                    <input type="submit" class="rounded-blue" value="Rechercher"/>
+                    <div class="rounded-blue">
+                        <i class="fas fa-search"></i>
+                        <input type="submit" value="Rechercher"/>
+                    </div>
+                 
                 </form>
                 <div id="filters">
                     <span>Filtres</span>
-                    
-                        <div>
+                    <div class="tag-menu">
+                        <div class="tag-filtre">
                             <i class="fas fa-money-bill-wave-alt round"></i>
                             <button class="btn active">Économique</button>
                         </div>
-                        <div>
+                        <div class="tag-filtre">
                             <i class="fas fa-child round"></i>
                             <button class="btn">Familial</button>
                         </div>
-                        <div>
+                        <div class="tag-filtre">
                             <i class="fas fa-heart round"></i>
                             <button class="btn">Romantique</button>
                         </div>
-                        <div>
+                        <div class="tag-filtre">
                             <i class="fas fa-dog round"></i>
                             <button class="btn"> Animaux autorisés</button>
                         </div>
-                        
+                    </div>
                         
                 </div>
                  <div class="info">
