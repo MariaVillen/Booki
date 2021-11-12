@@ -11,17 +11,20 @@
 body {
     font-family: 'Raleway';
     max-width: 2880px;
-    font-size: 0.92vw; /* 30.400px sur 2880px */
+    font-size: 1vw;
 }
-section {
-    margin-bottom: 8%;
+header, section {
+    padding: 0 2.0835%;
+    margin: 1.7365%;
 }
 a {
     color: #202020;
     text-decoration: none;
 }
 h1 {
-    font-size: 1.35vw; /*44px sur 2880px */
+    font-size: 1.35vw;
+    height: 100%;
+    width: 100%;
 }
 img {
     height: 100%;
@@ -32,12 +35,10 @@ li {
 }
 #mainContent { 
     max-width: 2880px;
-    padding: 2.0835%;
-    margin: 1.7365%;
+    padding-top: 1vw;
 }
-#results-containers, #activites {
-    margin-bottom: 5%;
-}
+
+
 
 /* header */
 
@@ -72,14 +73,23 @@ nav ul .activeMenu a {
 
 #searchForm {
     padding: 0.6vw;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 1vw;
 }
 #searchForm i {
-    padding: 1vw;
+    padding: 1.2vw;
+    line-height: 1.15;
+    border: 2px solid var(--secondary-colorb);
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    background-color: var(--secondary-colorb);
 }
 #searchForm input {
     border: none;
     font-weight: bold;
     padding: 1.2vw;
+    border: 2px solid var(--secondary-colorb);
 }
 #searchForm .rounded-blue {
     display: inline;
@@ -87,6 +97,7 @@ nav ul .activeMenu a {
 #searchForm .rounded-blue input, #searchForm .rounded-blue i {
     background: var(--main-color);
     color: white;
+    border: 2px solid var(--main-color);
 }
 #searchForm .rounded-blue input {
     border-bottom-right-radius: 1vw;
@@ -114,22 +125,24 @@ i.small-round {
     border: 1px solid var(--secondary-colorb);
     border-radius: 50%;
     color: var(--main-color);
-    padding: 5px 10px;
+    padding: 0.4vw 0.7vw;
+    font-size: 0.8vw;
 }
 #filters {
     display: flex;
-    padding: 0.9vw 0vw 1.5vw 0vw;
+    padding: 1.5vw 0vw;
     align-items: center;
     font-weight: bolder;
 }
 #filters .btn {
     font-weight: bolder;
     border-radius: 2vw;
-    border: 2px solid var(--secondary-colorb);
+    border: 3px solid var(--secondary-colorb);
     border-left: none;
     margin-left: -3vw;
     padding-left: 4vw;
     padding-right: 1vw;
+    background: none;
     z-index: 0;
 }
 #filters span {
@@ -153,7 +166,7 @@ i.small-round {
 
 .card {
     border-radius: 1vw;
-    box-shadow: 3px 4px 35px 2px #c4c4c4;
+    box-shadow: 4px 4px 35px 2px #c9c9c9;
     display: block;
     padding: 0.3vw;
 }
@@ -168,19 +181,29 @@ i.small-round {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
-.card-header h2 {
-    padding: 4.954% 0;
-    margin: 5.653% 0;
+    margin: auto 1vw;
 }
 .card-header i {
-        margin: auto 0;
+    margin: auto 0;
+    padding: 1vw;
+    font-size: 1.6vw;
 }
 .card-title h3 {
     font-size: 1.2vw;
     margin-bottom: 0;
 }
-.card-image img {
+.card-image {
+    position: relative;
+    flex: none;
+}
+.card-image .image-ratio {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     object-fit: cover;
 }
 .card-description {
@@ -196,11 +219,47 @@ i.small-round {
     color: var(--main-color);
 }
 .card-footer {
-    align-self: end;
-    margin-top: auto;
+    margin: auto;
     width: 100%;
 }
 
+.card .card-image.ratio15-37
+{
+    padding-bottom: calc(100% * 15/ 37.6);
+}
+.card .card-image.ratio2 {
+    padding-bottom: calc(100% * 115 / 238);
+}
+
+
+/* cards column */
+.card.card-column .card-image {
+    width: 100%;
+}
+.card.card-column img {
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}
+
+/*cards row*/
+.card.card-row a {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card.card-row img {
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+.card.card-row .card-image {
+    width: 37.5%;
+}
+.card.card-row .card-body {
+    position: relative;
+}
+.card.card-row .card-stars {
+    position: absolute;
+    bottom: 8.095%;
+} 
 /* Results containers */
 
 .card-container {
@@ -214,54 +273,43 @@ i.small-round {
 #results-containers>div {
     display: flex;
     flex-direction: column;
-    padding: 2.2167%;
+    margin: 2.2167%;
+    background: #F2F2F2;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+#results-containers>div h2 {
+    padding: 1vw;
+    font-size: 1.6vw;
 }
 
 
 /* plus populaires*/
 
-#plus-populaires {
+#results-containers #plus-populaires {
     width: 35.3185%;
+    margin-right: 0;
 }
 #plus-populaires .card-container {
     flex-direction: column; 
+    align-items: center;
 }
 #plus-populaires .card {
     width: 23.9585vw;
     margin-bottom: 8.095%;
 }
-#plus-populaires .card a {
-    display: flex;
-    flex-wrap: nowrap;
-}
-#plus-populaires .card-image {
-    max-height: 268px;
-    width: 8.75vw;
-    height: calc(8.75vw * 1.0634920635); /* le longueur multiplié par le ratio original (268 hauter /252 longueur)*/
-    flex: none;
-}
-#plus-populaires .card-image img {
-    border-top-left-radius: 1vw;
-    border-bottom-left-radius: 1vw;
-}
-#plus-populaires .card-body {
-    position: relative;
-}
-#plus-populaires .card-stars {
-    position: absolute;
-    bottom: 8.095%;
-}
 
+#plus-populaires .card-image {
+    width: 37.8%;
+}
 
 /* Hebergements */
 
 #results-containers #hebergements {
-    margin-right: 2%;
-    padding-left: 0;
+    margin-right: 1vw;
+    margin-left: 0;
 }
 #hebergements h2 {
-    padding: 1.84%;
-    font-size: 1.6vw;
     margin-left: 1%;
 }
 #hebergements .card-container {
@@ -269,19 +317,8 @@ i.small-round {
     justify-content: space-around;
 }
 #hebergements .card {
-    /*width: 28.861%; width: 28.155%;*/
-    margin-bottom: 3.477%;
-    width: 28.3715%;
-}
-#hebergements .card-image {
-    max-height: 230px;
-    /*height: 7.9865vw;*/
-    height: calc(16.3195vw * 0.489361702); /* dividir alto por ancho y multiplicar para mantener relación de aspecto*/
-    width: 100%;
-}
-#hebergements .card-image img {
-    border-top-left-radius: 1vw;
-    border-top-right-radius: 1vw;
+    margin-bottom: 2vw;
+    width: 29.5%;
 }
 #hebergements .card-body {
     line-height: 0.5vw;
@@ -302,29 +339,46 @@ i.small-round {
 #activites {
     max-width: 100%;
 }
+#activites h2 {
+    font-size: 1.6vw;
+    padding: 1vw;
+    margin-left: 1vw;
+}
 #activites .card-container {
     flex-flow: column wrap;
     justify-content: space-between;
     height: 30.764vw; 
 }
 #activites .activiteCard {
-    width: 25%;
-    height: 50%;
-    padding: 1%;
-    margin: 0;
+    width: 23%;
+    height: 43%;
+    margin: 1%;
     border-radius:1.0417vw;
     display: flex;
     flex-flow: column nowrap;
+    box-shadow: 3px 4px 35px 2px #c4c4c4;- Légalisation photo pour passeport Sarah et virement au consulat. 
+- Demander Remboursement Mdph 
+- Demandes relatives à la formation et le changement de situation au Pôle Emploi et CAF
+
+Pour les prochaines 15 jours:
+- Remplir et présenter demande DALO 
+- Demander au médecin ordonnance pour traitement (pass sanitaire)
+}
+#activites .activiteCard div {
+    height: 100%;
+    position: relative;
 }
 #activites .activiteCard p  {
     margin: 1vw;
     font-weight: bolder;
 }
-#activites .activiteCard:nth-child(3n+1) {
+#activites .activiteCard:nth-child(3n+1)
+{
     height: 100%;
 }
 #activites img {
     object-fit: cover;
+    position: absolute;
     border-top-left-radius: 1.0417vw;
     border-top-right-radius: 1.0417vw;
     min-height: 0;
@@ -332,18 +386,22 @@ i.small-round {
 }
 /* footer*/
 footer {
+    width: 100%;
+    background: #F2F2F2;
+}
+.footer-content {
     display: flex;
     width: 75%;
     justify-content: space-between;
-    margin: 3% 0;
+    margin: 3%;
 }
-footer div h2 {
+.footer-content div h2 {
     font-weight: bolder;
 }
-footer ul {
+.footer-content ul {
     padding-left: 0;
 }
-footer div li {
+.footer-content div li {
     font-size: 1vw;
     line-height: 2vw;
     padding-left: 0;
@@ -394,14 +452,17 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         margin: 10% 5%;
         font-size: 4vw;
     }
-    #header-description h1 {
+    #header-description h1,
+    .card-title h3 {
         font-size: 5vw;
     }
 
     /*search*/
     #search {
-        font-size: 3vw;
         text-align: center;
+    }
+    #serachForm input {
+        font-size: 4vw;
     }
     #searchForm .rounded-blue i {
         display: initial;
@@ -423,7 +484,6 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         margin: 2vw;
     }
     #filters i {
-    font-size: 3vw;
     padding: 3vw;
     }
     #filters .btn {
@@ -444,16 +504,77 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         flex-flow: column nowrap;
         width: 100%;
     }
+    #activites .activiteCard {
+        width: 100%;
+    }
     #activites .card-container {
         height: auto;
     }
-    #plus-populaires .card {
+    #hebergements .card.card-column,
+    #plus-populaires .card.card-row {
         width: 100%;
     }
+    .card {
+        box-shadow: none;
+    }
+    .card.card-column .card-image.ratio2 {
+    padding-bottom: calc(100% * 114 / 324);
+    }
+    .card.card-column img {
+        border-top-left-radius: 3vw;
+        border-top-right-radius: 3vw;
+    }
+    
+    .card.card-row img {
+    border-top-left-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    }
+    .card-description,
+    .card-stars,
+    #hebergements .card-footer a,
+    #filters i,
+    #search {
+        font-size: 3vw;
+    }
+    .card-header {
+        font-size: 4vw;
+    }
 
+    #hebergements h2 {
+        font-size: 6vw;
+        margin-left: 0;
+    }
+    #hebergements .card-body {
+        line-height: 3vw;
+    }
+    #activites .activiteCard {
+        margin-bottom: 3.477%;
+    }
+    #activites .activiteCard div{
+        padding-bottom: calc(100% * 114 / 325);
+        position: relative;
+        flex: none;
+    }
+    #activites .activiteCard p {
+        margin: 4vw;
+    }
+    #activites img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top-left-radius: 3vw;
+        border-top-right-radius: 3vw;
+    }
+
+    
+    footer div li {
+    font-size: 2.5VW;
+    line-height: 5vw;
+    }
 }
 
 @media (max-width: 992px) {
-
 
 } 
