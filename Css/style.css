@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
     box-sizing: border-box;
 }
@@ -16,14 +18,17 @@ header, section {
     padding: 0 2.0835%;
     margin: 1.7365%;
 }
-a {
-    color: #202020;
-    text-decoration: none;
-}
 h1 {
-    font-size: 1.35vw;
+    font-size: 150%;
     height: 100%;
     width: 100%;
+}
+h2 {
+    font-size: 160%;
+    padding: 1vw 0;
+}
+h3 {
+    font-size: 120%;
 }
 img {
     height: 100%;
@@ -32,12 +37,35 @@ img {
 li {
     list-style: none;
 }
-
-#main-content { 
-    padding-top: 1vw;
+a {
+    color: #202020;
+    text-decoration: none;
 }
-
-
+i.round {
+    background: var(--secondary-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    padding: 1.2vw;
+    z-index: 1;
+    font-size: larger;
+}
+i.small-round {
+    border: 1px solid var(--secondary-colorb);
+    border-radius: 50%;
+    color: var(--main-color);
+    padding: 0.5% 0.8%;
+    font-size: 80%;
+}
+i.square-round {
+    padding: 1.2%;
+    border: 2px solid var(--secondary-colorb);
+    border-bottom-left-radius: 1vw;
+    border-top-left-radius: 1vw;
+    background-color: var(--secondary-colorb);
+}
+#main-content { 
+    padding-top: 1.1%;
+}
 /* HEADER */
 
 #header-top {
@@ -45,12 +73,12 @@ li {
     flex-direction: row;
     justify-content: space-between;
 }
+#header-description {
+    margin: 2% auto 1% auto;
+}
 #logo img {
     object-fit: contain;
     width: 6vw;
-}
-#header-description {
-    margin: 2% auto 1% auto;
 }
 
 /*navbar */
@@ -59,15 +87,17 @@ nav ul li {
     display: inline;
     padding-top: 3.542vw; 
 }
-nav ul .active-menu {
-    border-top: 2px solid var(--main-color);
-}
+
 nav ul li a {
     padding: 25px 15px;
+}
+nav ul .active-menu {
+    border-top: 2px solid var(--main-color);
 }
 nav ul .active-menu a {
     color: var(--main-color);
 }
+
 
 
 /* SECTION */
@@ -79,190 +109,179 @@ nav ul .active-menu a {
     display: flex;
     flex-wrap: nowrap;
 }
-#search-form i {
-    padding: 1.2vw;
-    line-height: 1.15;
-    border: 2px solid var(--secondary-colorb);
-    border-top-left-radius: 1vw;
-    border-bottom-left-radius: 1vw;
-    background-color: var(--secondary-colorb);
-}
 #search-form input {
     border: none;
     font-weight: bold;
-    padding: 1.2vw;
+    padding: 1.2%;
     border: 2px solid var(--secondary-colorb);
 }
-#search-form .rounded-blue input, 
-#search-form .rounded-blue i {
+#search-form .round-blue {
+    display: inherit;
+}
+#search-form .round-blue input, 
+#search-form .round-blue i {
     background: var(--main-color);
     color: white;
     border: 2px solid var(--main-color);
+    padding: 12%;
 }
-#search-form .rounded-blue input {
+#search-form .round-blue input {
     border-bottom-right-radius: 1vw;
     border-top-right-radius: 1vw;       
 }
-#search-form .rounded-blue i {
+#search-form .round-blue i {
     padding: 2vw;
     border-radius: 2vw;
     display: none;
     margin-left: -2vw;
 }
 #search .info {
-    margin: 1vw 0;
+    margin: 1% 0;
+    display: flex;
+    align-items: baseline;
+}
+#search .info i {
+    display: block;
+    margin-right: 2vw;
 }
 
 /*Filters*/
 
-i.round {
-    background: var(--secondary-color);
-    border-radius: 50%;
-    color: var(--main-color);
-    padding: 1.2vw;
-    z-index: 1;
-    font-size: 1.2vw;
-}
-i.small-round {
-    border: 1px solid var(--secondary-colorb);
-    border-radius: 50%;
-    color: var(--main-color);
-    padding: 0.4vw 0.7vw;
-    font-size: 0.8vw;
-}
+
+
 #filters {
     display: flex;
     flex-flow: row wrap;
-    padding: 1.5vw 0vw;
+    padding: 1.5% 0%;
     align-items: center;
     font-weight: bolder;
 }
 #filters .tag-menu {
     display: flex;
     flex-flow: row wrap;
+    flex-grow: 1;
 }
 #filters .btn {
     font-weight: bolder;
-    border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
+    border-top-right-radius: 2vw;
     border: 3px solid var(--secondary-colorb);
     border-left: none;
-    margin-left: -3vw;
-    padding-left: 4vw;
+    margin-left: -2vw;
+    padding-left: 3vw;
     padding-right: 1vw;
     background: none;
-    flex: none;
-    z-index: 0;
 }
 #filters i {
     flex: none;
 }
 #filters span {
-    padding-left: 15px;
-    margin-right: 2vw;
+    padding-left: 1%;
+    margin-right: 2%;
 }
-#filters .tag-filtre {
+#filters .tag-filter {
     display: flex;
     flex-wrap: nowrap;
-    margin-right: 1.5vw;
+    margin: 1%;
 }
 
 
 /* Cards */
 
-.card {
-    border-radius: 1vw;
-    box-shadow: 3px 4px 35px 2px #c4c4c4;
-    display: block;
-    padding: 0.3vw;
-}
-.card.card-row a {
-    display: flex;
-    flex-wrap: nowrap;
-}
-.card-header { 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin: auto 1vw;
-}
-.card-header i {
-    margin: auto 0;
-    padding: 1vw;
-    font-size: 1.6vw;
-}
+    /* General */
+    .card {
+        border-radius: 1vw;
+        box-shadow: 3px 4px 35px 2px #c4c4c4;
+        display: block;
+        padding: 0.3vw;
+    }
 
-.card-body {
-    display: block;
-    padding: 0 5%;
-    padding-bottom: 3%;
-    line-height: 1;
-}
-.card.card-row .card-body {
-    position: relative;
-}
-.card-image {
-    position: relative;
-    flex: none;
-}
-.card.card-column .card-image {
-    width: 100%;
-}
-.card.card-row .card-image {
-    width: 37.5%;
-}
-.card.card-column img {
-    border-top-left-radius: 1vw;
-    border-top-right-radius: 1vw;
-}
-.card.card-row img {
-    border-top-left-radius: 1vw;
-    border-bottom-left-radius: 1vw;
-}
-.card-image .image-ratio {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    object-fit: cover;
-}
-.card .card-image.ratio1
-{
-    padding-bottom: calc(100% * 15/ 37.6);
-}
-.card .card-image.ratio2 {
-    padding-bottom: calc(100% * 115 / 238);
-}
+    /* header */
+    .card-header { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: auto 6%;
+    }
+    .card-header i {
+        margin: auto 0;
+        padding: 1%;
+        font-size: 160%;
+    }
 
-.card-title h3 {
-    font-size: 1.2vw;
-    margin-bottom: 0;
-}
-.card-description {
-    font-size: 1vw;
-}
-.card-stars {
-    font-size: 0.7vw;
-}
-.card.card-row .card-stars {
-    position: absolute;
-    bottom: 8.095%;
-} 
-.card-stars i {
-    color: var(--secondary-colorb);
-}
-.card-stars i.active {
-    color: var(--main-color);
-}
+    /* Body */
+    .card-body {
+        display: block;
+        padding: 0 5%;
+        padding-bottom: 3%;
+        line-height: 1;
+    }    
+    .card-image {
+        position: relative;
+        flex: none;
+    }
+    
+    .card-image .image-ratio {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+    }
+    .card .card-image.ratio1 {
+        padding-bottom: calc(100% * 15/ 37.6);
+    }
+    .card .card-image.ratio2 {
+        padding-bottom: calc(100% * 115 / 238);
+    }
+    .card-stars {
+        font-size: 70%;
+    }
+    .card-stars i {
+        color: var(--secondary-colorb);
+    }
+    .card-stars i.active {
+        color: var(--main-color);
+    }
+    .card-footer {
+        margin: auto;
+        width: 100%;
+    }
+    
+    /* Type Row */
+    .card.card-row a {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .card.card-row .card-body {
+        position: relative;
+    }
+    .card.card-row .card-image {
+        width: 37.5%;
+    }
+    .card.card-row img {
+        border-top-left-radius: 1vw;
+        border-bottom-left-radius: 1vw;
+    }
+    .card.card-row .card-stars {
+        position: absolute;
+        bottom: 8.095%;
+    }     
+    
+    /* Type Column */
+    .card.card-column .card-image {
+        width: 100%;
+    }
+    .card.card-column img {
+        border-top-left-radius: 1vw;
+        border-top-right-radius: 1vw;
+    }
 
-.card-footer {
-    margin: auto;
-    width: 100%;
-}
+
 
 /* Results containers */
 
@@ -274,107 +293,101 @@ i.small-round {
     flex-direction: row-reverse;
     width: 100%;
 }
-#results-containers h2 {
-    padding: 1vw;
-    font-size: 1.6vw;
-}
-#plus-populaires, #hebergements {
+
+#populars, #logements {
     display: flex;
     flex-direction: column;
     margin: 2.2167%;
     background: #F2F2F2;
     border-radius: 1vw;
-    padding: 1vw;
+    padding: 1%;
 }
 
 
 /* plus populaires*/
 
-#plus-populaires {
+#populars {
     width: 35.3185%;
     margin-right: 0;
 }
-#plus-populaires .card-container {
+#populars .card-container {
     flex-direction: column; 
     align-items: center;
 }
-#plus-populaires .card {
+#populars .card {
     width: 23.9585vw;
     margin-bottom: 8.095%;
 }
-
-#plus-populaires .card-image {
+#populars .card-image {
     width: 37.8%;
 }
 
-/* Hebergements */
+/* logements */
 
-#hebergements {
+#logements {
     margin-right: 1vw;
     margin-left: 0;
 }
-#hebergements h2 {
-    margin-left: 1%;
+#logements h2 {
+    margin-left: 3%;
 }
-#hebergements .card-container {
+#logements .card-container {
     flex-flow: row wrap;
     justify-content: space-around;
 }
-#hebergements .card {
-    margin-bottom: 2vw;
+#logements .card {
+    margin-bottom: 2.5%;;
     width: 29.5%;
 }
-#hebergements .card-body {
-    line-height: 0.5vw;
+#logements .card-body {
+    line-height: 0.5;
 }
-#hebergements .card-body h2 {
+#logements .card-body h2 {
     line-height: 1;
     margin: 15px 0 0 0;
 }
-#hebergements .card-footer a {
+#logements .card-footer a {
     margin-left: 3%;
     font-weight: bolder;
-    font-size: 1.2vw;
+    font-size: 120%;
 }
 
-/* Activites */
+/* Activities */
 
 
-#activites {
+#activities {
     max-width: 100%;
 }
-#activites h2 {
-    font-size: 1.6vw;
-    padding: 1vw;
-    margin-left: 1vw;
+#activities h2 {
+    padding: 1%;
 }
-#activites .card-container {
+#activities .card-container {
     flex-flow: column wrap;
     justify-content: space-between;
     height: 30.764vw; 
 }
-#activites .activite-card {
+#activities .activity-card {
+    display: flex;
+    flex-flow: column nowrap;
     width: 23%;
     height: 43%;
     margin: 1%;
-    border-radius:1.0417vw;
-    display: flex;
-    flex-flow: column nowrap;
+    border-radius: 1.0417vw;
     box-shadow: 3px 4px 35px 2px #c4c4c4;
 }
-#activites .activite-card div {
+#activities .activity-card div {
     height: 100%;
     position: relative;
 }
-#activites .activite-card p  {
-    margin: 1vw;
+#activities .activity-card p  {
+    margin: 6%;
     font-weight: bolder;
 }
-#activites .activite-card:nth-child(3n+1)
+#activities .activity-card:nth-child(3n+1)
 {
     height: 100%;
 }
-#activites img {
+#activities img {
     object-fit: cover;
     position: absolute;
     border-top-left-radius: 1.0417vw;
@@ -403,9 +416,7 @@ footer {
     padding-left: 0;
 }
 .footer-content div li {
-    font-size: 1vw;
-    line-height: 2vw;
-    padding-left: 0;
+    line-height: 2;
 }
 
 
@@ -423,22 +434,20 @@ footer {
     #results-containers {
         flex-direction: column;
     }
-    #plus-populaires, #hebergements {
+    #populars, #logements {
         margin:auto;
         width: 100%;
-        padding: 2% 3% 3% 3%;
+        padding: 2% 3% 5% 3%;
         border-radius: 0;
     }
-    #plus-populaires {
-        padding-bottom: 5%;
-    }
-    #hebergements {
+
+    #logements {
         background: none;
     }
-    #plus-populaires .card-container {
+    #populars .card-container {
         flex-direction: row;
     }
-    #plus-populaires .card {
+    #populars .card {
         width: 30%;
         margin: auto;
     }
@@ -449,18 +458,18 @@ footer {
     .card-footer a {
         margin: 3%;
     }
-    #activites {
+    #activities {
     margin: 0 3.5% 5% 3.5%;
     }
-    #activites .card-container {
+    #activities .card-container {
         max-width: 100%;
         flex-direction: row;
         height: 40vw;
     }
-    #activites .activite-card:nth-child(3n+1){
+    #activities .activity-card:nth-child(3n+1){
         height: 43%;
     }
-    #activites .activite-card {
+    #activities .activity-card {
         width: 30%;
     }
 }
@@ -475,11 +484,13 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
 
 
     body {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     /* header */
-
+    h2 {
+        font-size: 150%;
+    }
     header {
         margin: 0;
         padding: 0;
@@ -494,12 +505,12 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
     #logo img {
         width: 25.5%;
     }
+    i.small-round {
+        padding: 1% 2%;
+    }
     nav ul {
         padding: 0;
         display: flex;
-        width: 100%;
-        justify-content: space-between;
-        font-size: 4vw;
     }
     nav ul li {
         padding: initial;
@@ -514,31 +525,25 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
 
     #header-description {
         margin: 10% 5%;
-        font-size: 4vw;
-    }
-    #header-description h1,
-    .card-header i {
-        font-size: 7vw;
     }
     #search {
-        font-size: 4vw;
         margin-bottom: 8%;
     }
     #search-form {
         justify-content: center;
-        margin-bottom: 3vw;
+        margin-bottom: 3%;
     }
 
-    #search-form .rounded-blue input {
+    #search-form .round-blue input {
         display: none;
     }
 
-    #search-form .rounded-blue i {
+    #search-form .round-blue i {
         display: block;
         padding: 4vw;
         border-radius: 3vw;
     }
-    #search-form i {
+    i.square-round {
         padding: 4vw;
         border-top-left-radius: 4vw;
         border-bottom-left-radius: 4vw;
@@ -547,56 +552,44 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         padding: 4vw;
     }
 
-    #filters span {
-        padding: 3vw;
-    }
+    #filters span,
     #filters .tag-menu {
-        padding: 3vw;
+        padding: 3%;
     }
     #filters .btn {
-        border-top-right-radius: 4vw;
-        border-bottom-right-radius: 4vw;
+        border-top-right-radius: 6vw;
+        border-bottom-right-radius: 6vw;
         padding-right: 4vw;
         margin-left: -6vw;
         padding-left: 9vw;
     }
     i.round {
-        font-size: 4vw;
         padding: 4vw;
     }
-    .tag-filtre {
+    .tag-filter {
         margin: 2vw;
     }
-    #results-containers h2,
-    #activites h2 {
-        font-size: 6vw;
-    }
+
     .card,
-    #activites .activite-card,
-    .activite-card div {
+    #activities .activity-card,
+    .activity-card div {
         border-radius: 5vw;
     }
     .card .card-image.ratio2,
-    #activites .activite-card div {
+    #activities .activity-card div {
         padding-bottom: calc(100% * 15 / 37.6);
     }
-    .card-title h3 {
-        font-size: 5vw;
+    .card-header {
+        margin: auto 0%;
     }
-    .card-description p {
-        font-size: 4vw;
-    }
-    .card-stars {
-            font-size: 3vw;
+    .card-header i {
+        font-size: 150%;
     }
     .card-footer {
         text-align: initial;
     }
-    #hebergements .card-footer a {
-        font-size: 3vw;
-    }
     .card.card-column img,
-    #activites img {
+    #activities img {
         border-top-left-radius: 5vw;
         border-top-right-radius: 5vw;
     }
@@ -604,38 +597,37 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         border-top-left-radius: 5vw;
         border-bottom-left-radius: 5vw;
     }
-    #plus-populaires,
-    #hebergements, #activites {
+    #populars,
+    #logements, #activities {
         padding: 5%;
         padding-bottom: 10%;
     }
-    #plus-populaires .card-container,
+    #populars .card-container,
     #herbergements .card-container,
-    #activites .card-container,
+    #activities .card-container,
     .footer-content {
         flex-direction: column;
         height: auto;
     }
-    #plus-populaires .card,
-    #hebergements .card,
-    #activites .activite-card,
-    #activites .activite-card:nth-child(3n+1) {
+    #populars .card,
+    #logements .card,
+    #activities .activity-card,
+    #activities .activity-card:nth-child(3n+1) {
         width: 100%;
-        margin: 2vw 0 3vw 0;
+        margin: 2% 0 3% 0;
     }
  
-    #hebergements .card-body {
+    #logements .card-body {
         line-height: initial;
     }
     .footer-content {
         margin: 4%;
     }
-    .activite-card p {
-        padding: 3vw;
-        font-size: 4vw;
+    .activity-card p {
+        padding: 3%;
     }
     .footer-content div li {
-        font-size: 3vw;
+        font-size: 80%;
         line-height: 2;
     }
 
