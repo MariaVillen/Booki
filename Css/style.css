@@ -33,16 +33,16 @@ img {
 li {
     list-style: none;
 }
-#mainContent { 
+
+#main-content { 
     max-width: 2880px;
     padding-top: 1vw;
 }
 
 
+/* HEADER */
 
-/* header */
-
-#headerTop {
+#header-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,30 +54,35 @@ li {
 #header-description {
     margin: 2% auto 1% auto;
 }
+
+/*navbar */
+
 nav ul li {
     display: inline;
     padding-top: 3.542vw; 
 }
-nav ul .activeMenu {
+nav ul .active-menu {
     border-top: 2px solid var(--main-color);
 }
 nav ul li a {
     padding: 25px 15px;
 }
-nav ul .activeMenu a {
+nav ul .active-menu a {
     color: var(--main-color);
 }
 
+
+/* SECTION */
+
 /*search bar*/
 
-
-#searchForm {
+#search-form {
     padding: 0.6vw;
     display: flex;
     flex-wrap: nowrap;
     font-size: 1vw;
 }
-#searchForm i {
+#search-form i {
     padding: 1.2vw;
     line-height: 1.15;
     border: 2px solid var(--secondary-colorb);
@@ -85,31 +90,33 @@ nav ul .activeMenu a {
     border-bottom-left-radius: 1vw;
     background-color: var(--secondary-colorb);
 }
-#searchForm input {
+#search-form input {
     border: none;
     font-weight: bold;
     padding: 1.2vw;
     border: 2px solid var(--secondary-colorb);
 }
-#searchForm .rounded-blue {
+#search-form .rounded-blue {
     display: inline;
 }
-#searchForm .rounded-blue input, #searchForm .rounded-blue i {
+#search-form .rounded-blue input, 
+#search-form .rounded-blue i {
     background: var(--main-color);
     color: white;
     border: 2px solid var(--main-color);
 }
-#searchForm .rounded-blue input {
+#search-form .rounded-blue input {
     border-bottom-right-radius: 1vw;
     border-top-right-radius: 1vw;       
 }
-#searchForm .rounded-blue i {
+#search-form .rounded-blue i {
     padding: 2vw;
     border-radius: 2vw;
     display: none;
 }
-
-/* SECTION */
+#search .info {
+    margin: 1vw 0;
+}
 
 /*Filters*/
 
@@ -134,6 +141,9 @@ i.small-round {
     align-items: center;
     font-weight: bolder;
 }
+#filters .tag-menu {
+    display: flex;
+}
 #filters .btn {
     font-weight: bolder;
     border-radius: 2vw;
@@ -154,27 +164,19 @@ i.small-round {
     flex-wrap: nowrap;
     margin-right: 1.5vh;
 }
-#filters .tag-menu {
-    display: flex;
-}
-#search .info {
- margin: 1vw 0;
-}
 
 
 /* Cards */
 
 .card {
     border-radius: 1vw;
-    box-shadow: 4px 4px 35px 2px #c9c9c9;
+    box-shadow: 3px 4px 35px 2px #c4c4c4;
     display: block;
     padding: 0.3vw;
 }
-.card-body {
-    display: block;
-    padding: 0 5%;
-    padding-bottom: 3%;
-    line-height: 1;
+.card.card-row a {
+    display: flex;
+    flex-wrap: nowrap;
 }
 .card-header { 
     display: flex;
@@ -188,13 +190,33 @@ i.small-round {
     padding: 1vw;
     font-size: 1.6vw;
 }
-.card-title h3 {
-    font-size: 1.2vw;
-    margin-bottom: 0;
+
+.card-body {
+    display: block;
+    padding: 0 5%;
+    padding-bottom: 3%;
+    line-height: 1;
+}
+.card.card-row .card-body {
+    position: relative;
 }
 .card-image {
     position: relative;
     flex: none;
+}
+.card.card-column .card-image {
+    width: 100%;
+}
+.card.card-row .card-image {
+    width: 37.5%;
+}
+.card.card-column img {
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}
+.card.card-row img {
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
 }
 .card-image .image-ratio {
     width: 100%;
@@ -206,24 +228,7 @@ i.small-round {
       right: 0;
     object-fit: cover;
 }
-.card-description {
-    font-size: 1vw;
-}
-.card-stars {
-    font-size: 0.7vw;
-}
-.card-stars i {
-    color: var(--secondary-colorb);
-}
-.card-stars i.active {
-    color: var(--main-color);
-}
-.card-footer {
-    margin: auto;
-    width: 100%;
-}
-
-.card .card-image.ratio15-37
+.card .card-image.ratio1
 {
     padding-bottom: calc(100% * 15/ 37.6);
 }
@@ -231,35 +236,32 @@ i.small-round {
     padding-bottom: calc(100% * 115 / 238);
 }
 
-
-/* cards column */
-.card.card-column .card-image {
-    width: 100%;
+.card-title h3 {
+    font-size: 1.2vw;
+    margin-bottom: 0;
 }
-.card.card-column img {
-    border-top-left-radius: 1vw;
-    border-top-right-radius: 1vw;
+.card-description {
+    font-size: 1vw;
 }
-
-/*cards row*/
-.card.card-row a {
-    display: flex;
-    flex-wrap: nowrap;
-}
-.card.card-row img {
-    border-top-left-radius: 1vw;
-    border-bottom-left-radius: 1vw;
-}
-.card.card-row .card-image {
-    width: 37.5%;
-}
-.card.card-row .card-body {
-    position: relative;
+.card-stars {
+    font-size: 0.7vw;
 }
 .card.card-row .card-stars {
     position: absolute;
     bottom: 8.095%;
 } 
+.card-stars i {
+    color: var(--secondary-colorb);
+}
+.card-stars i.active {
+    color: var(--main-color);
+}
+
+.card-footer {
+    margin: auto;
+    width: 100%;
+}
+
 /* Results containers */
 
 .card-container {
@@ -270,7 +272,11 @@ i.small-round {
     flex-direction: row-reverse;
     width: 100%;
 }
-#results-containers>div {
+#results-containers h2 {
+    padding: 1vw;
+    font-size: 1.6vw;
+}
+#plus-populaires, #hebergements {
     display: flex;
     flex-direction: column;
     margin: 2.2167%;
@@ -278,15 +284,11 @@ i.small-round {
     border-radius: 1vw;
     padding: 1vw;
 }
-#results-containers>div h2 {
-    padding: 1vw;
-    font-size: 1.6vw;
-}
 
 
 /* plus populaires*/
 
-#results-containers #plus-populaires {
+#plus-populaires {
     width: 35.3185%;
     margin-right: 0;
 }
@@ -305,7 +307,7 @@ i.small-round {
 
 /* Hebergements */
 
-#results-containers #hebergements {
+#hebergements {
     margin-right: 1vw;
     margin-left: 0;
 }
@@ -349,30 +351,25 @@ i.small-round {
     justify-content: space-between;
     height: 30.764vw; 
 }
-#activites .activiteCard {
+#activites .activite-card {
     width: 23%;
     height: 43%;
+    padding: 0;
     margin: 1%;
     border-radius:1.0417vw;
     display: flex;
     flex-flow: column nowrap;
-    box-shadow: 3px 4px 35px 2px #c4c4c4;- Légalisation photo pour passeport Sarah et virement au consulat. 
-- Demander Remboursement Mdph 
-- Demandes relatives à la formation et le changement de situation au Pôle Emploi et CAF
-
-Pour les prochaines 15 jours:
-- Remplir et présenter demande DALO 
-- Demander au médecin ordonnance pour traitement (pass sanitaire)
+    box-shadow: 3px 4px 35px 2px #c4c4c4;
 }
-#activites .activiteCard div {
+#activites .activite-card div {
     height: 100%;
     position: relative;
 }
-#activites .activiteCard p  {
+#activites .activite-card p  {
     margin: 1vw;
     font-weight: bolder;
 }
-#activites .activiteCard:nth-child(3n+1)
+#activites .activite-card:nth-child(3n+1)
 {
     height: 100%;
 }
@@ -384,7 +381,8 @@ Pour les prochaines 15 jours:
     min-height: 0;
     flex: 1 1 0;
 }
-/* footer*/
+
+/* FOOTER */
 footer {
     width: 100%;
     background: #F2F2F2;
@@ -414,7 +412,7 @@ footer {
 d’utiliser 992 px et 768 px.
 992 px pour les écrans d’ordinateurs et 768 px pour les tablettes, et
 tout ce qui est en dessous de 768 pour les téléphones portables.
-*/
+*//*
 @media (max-width: 768px) {
 
 
@@ -422,9 +420,9 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         font-size: 2.7vw;
     }
 
-    /* header */
+    /* header *//*
 
-    #headerTop {
+    #header-top {
     display: block;
     text-align: center;
     }
@@ -443,7 +441,7 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         flex-grow: 0.2;
         padding: 2vw;
     }
-    nav ul .activeMenu {
+    nav ul .active-menu {
         border-bottom: 3px solid var(--main-color);
         border-top: none;
     }
@@ -457,21 +455,21 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         font-size: 5vw;
     }
 
-    /*search*/
+    /*search*//*
     #search {
         text-align: center;
     }
     #serachForm input {
         font-size: 4vw;
     }
-    #searchForm .rounded-blue i {
+    #search-form .rounded-blue i {
         display: initial;
     }
-    #searchForm .rounded-blue input {
+    #search-form .rounded-blue input {
         display: none;
     }
 
-    /* Filters */
+    /* Filters *//*
 
     #filters {
         display: block;
@@ -504,7 +502,7 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         flex-flow: column nowrap;
         width: 100%;
     }
-    #activites .activiteCard {
+    #activites .activite-card {
         width: 100%;
     }
     #activites .card-container {
@@ -547,15 +545,15 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
     #hebergements .card-body {
         line-height: 3vw;
     }
-    #activites .activiteCard {
+    #activites .activite-card {
         margin-bottom: 3.477%;
     }
-    #activites .activiteCard div{
+    #activites .activite-card div{
         padding-bottom: calc(100% * 114 / 325);
         position: relative;
         flex: none;
     }
-    #activites .activiteCard p {
+    #activites .activite-card p {
         margin: 4vw;
     }
     #activites img {
