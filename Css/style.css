@@ -165,7 +165,7 @@ nav ul .active-menu a {
     font-weight: bolder;
     border-bottom-right-radius: 2vw;
     border-top-right-radius: 2vw;
-    border: 3px solid var(--secondary-colorb);
+    border: 2px solid var(--secondary-colorb);
     border-left: none;
     margin-left: -2vw;
     padding-left: 3vw;
@@ -293,7 +293,6 @@ nav ul .active-menu a {
     flex-direction: row-reverse;
     width: 100%;
 }
-
 #populars, #logements {
     display: flex;
     flex-direction: column;
@@ -304,7 +303,7 @@ nav ul .active-menu a {
 }
 
 
-/* plus populaires*/
+/* Plus populaires*/
 
 #populars {
     width: 35.3185%;
@@ -322,7 +321,7 @@ nav ul .active-menu a {
     width: 37.8%;
 }
 
-/* logements */
+/* Hebergements */
 
 #logements {
     margin-right: 1vw;
@@ -352,7 +351,7 @@ nav ul .active-menu a {
     font-size: 120%;
 }
 
-/* Activities */
+/* Activites */
 
 
 #activities {
@@ -375,17 +374,13 @@ nav ul .active-menu a {
     border-radius: 1.0417vw;
     box-shadow: 3px 4px 35px 2px #c4c4c4;
 }
-#activities .activity-card div {
-    height: 100%;
-    position: relative;
-}
-#activities .activity-card p  {
-    margin: 6%;
-    font-weight: bolder;
-}
 #activities .activity-card:nth-child(3n+1)
 {
     height: 100%;
+}
+#activities .activity-card div {
+    height: 100%;
+    position: relative;
 }
 #activities img {
     object-fit: cover;
@@ -395,6 +390,11 @@ nav ul .active-menu a {
     min-height: 0;
     flex: 1 1 0;
 }
+#activities .activity-card p  {
+    margin: 6%;
+    font-weight: bolder;
+}
+
 
 /* FOOTER */
 footer {
@@ -422,11 +422,21 @@ footer {
 
 @media (max-width: 992px) {
 
+    /* GENERAL */
+
     section {
         margin: auto;
         padding: 0;
     }
+    .card-footer {
+        margin: 3% auto;
+        text-align: right;
+    }
+    .card-footer a {
+        margin: 3%;
+    }
 
+    /* SECTION */
     #search {
         margin: 3%;
     }
@@ -441,9 +451,7 @@ footer {
         border-radius: 0;
     }
 
-    #logements {
-        background: none;
-    }
+    /* Plus populaires */
     #populars .card-container {
         flex-direction: row;
     }
@@ -451,13 +459,13 @@ footer {
         width: 30%;
         margin: auto;
     }
-    .card-footer {
-        margin: 3% auto;
-        text-align: right;
+
+    /* Hebergements */
+    #logements {
+        background: none;
     }
-    .card-footer a {
-        margin: 3%;
-    }
+    
+    /* Activites */
     #activities {
     margin: 0 3.5% 5% 3.5%;
     }
@@ -466,34 +474,43 @@ footer {
         flex-direction: row;
         height: 40vw;
     }
-    #activities .activity-card:nth-child(3n+1){
-        height: 43%;
-    }
     #activities .activity-card {
         width: 30%;
     }
+    #activities .activity-card:nth-child(3n+1){
+        height: 43%;
+    }
+   
 }
 
 
-/*oncernant les breakpoints, nous avons convenu avec le client
-d’utiliser 992 px et 768 px.
-992 px pour les écrans d’ordinateurs et 768 px pour les tablettes, et
-tout ce qui est en dessous de 768 pour les téléphones portables.
-*/
 @media (max-width: 768px) {
 
-
+    /* GENERAL */
     body {
         font-size: 4vw;
     }
-
-    /* header */
     h2 {
         font-size: 150%;
     }
+    i.round {
+        padding: 4vw;
+    }
+    i.small-round {
+        padding: 1% 2%;
+    }
+    i.square-round {
+        padding: 4vw;
+        border-top-left-radius: 4vw;
+        border-bottom-left-radius: 4vw;
+    }
+    /* HEADER */
     header {
         margin: 0;
         padding: 0;
+    }    
+    #header-description {
+        margin: 10% 5%;
     }
     #header-top {
     display: block;
@@ -505,9 +522,8 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
     #logo img {
         width: 25.5%;
     }
-    i.small-round {
-        padding: 1% 2%;
-    }
+
+    /* navbar */
     nav ul {
         padding: 0;
         display: flex;
@@ -523,9 +539,9 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         border-top: none;
     }
 
-    #header-description {
-        margin: 10% 5%;
-    }
+    /* SECTION */
+
+    /* Search */
     #search {
         margin-bottom: 8%;
     }
@@ -533,25 +549,19 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         justify-content: center;
         margin-bottom: 3%;
     }
-
+    #search-form input {
+        padding: 4vw;
+    }
     #search-form .round-blue input {
         display: none;
     }
-
     #search-form .round-blue i {
         display: block;
         padding: 4vw;
         border-radius: 3vw;
     }
-    i.square-round {
-        padding: 4vw;
-        border-top-left-radius: 4vw;
-        border-bottom-left-radius: 4vw;
-    }
-    #search-form input {
-        padding: 4vw;
-    }
-
+ 
+    /* filters */
     #filters span,
     #filters .tag-menu {
         padding: 3%;
@@ -563,13 +573,24 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         margin-left: -6vw;
         padding-left: 9vw;
     }
-    i.round {
-        padding: 4vw;
-    }
     .tag-filter {
         margin: 2vw;
     }
 
+    /* containers */
+    .card-header {
+        margin: auto 0%;
+    }
+    .card-header i {
+        font-size: 150%;
+    }
+    .card.card-row img {
+        border-top-left-radius: 5vw;
+        border-bottom-left-radius: 5vw;
+    }
+    .card-footer {
+        text-align: initial;
+    }
     .card,
     #activities .activity-card,
     .activity-card div {
@@ -579,24 +600,13 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
     #activities .activity-card div {
         padding-bottom: calc(100% * 15 / 37.6);
     }
-    .card-header {
-        margin: auto 0%;
-    }
-    .card-header i {
-        font-size: 150%;
-    }
-    .card-footer {
-        text-align: initial;
-    }
+
     .card.card-column img,
     #activities img {
         border-top-left-radius: 5vw;
         border-top-right-radius: 5vw;
     }
-    .card.card-row img {
-        border-top-left-radius: 5vw;
-        border-bottom-left-radius: 5vw;
-    }
+  
     #populars,
     #logements, #activities {
         padding: 5%;
@@ -616,15 +626,17 @@ tout ce qui est en dessous de 768 pour les téléphones portables.
         width: 100%;
         margin: 2% 0 3% 0;
     }
- 
+    #activities {
+        margin: 0;
+    }
+    .activity-card p {
+        padding: 3%;
+    }
     #logements .card-body {
         line-height: initial;
     }
     .footer-content {
         margin: 4%;
-    }
-    .activity-card p {
-        padding: 3%;
     }
     .footer-content div li {
         font-size: 80%;
