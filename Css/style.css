@@ -17,6 +17,7 @@ body {
 header, section {
     padding: 0 2.0835%;
     margin: 1.7365%;
+    margin-bottom: 5%;
 }
 h1 {
     font-size: 150%;
@@ -83,18 +84,18 @@ i.square-round {
 
 /*navbar */
 
-nav ul li {
+header nav ul li {
     display: inline;
     padding-top: 3.542vw; 
 }
 
-nav ul li a {
+header nav ul li a {
     padding: 25px 15px;
 }
-nav ul .active-menu {
+header nav ul .active-menu {
     border-top: 2px solid var(--main-color);
 }
-nav ul .active-menu a {
+header nav ul .active-menu a {
     color: var(--main-color);
 }
 
@@ -409,13 +410,13 @@ footer {
     margin-left: 2%;
 
 }
-.footer-content div h2 {
+.footer-content h2 {
     font-weight: bolder;
 }
 .footer-content ul {
     padding-left: 0;
 }
-.footer-content div li {
+.footer-content li {
     line-height: 2;
 }
 
@@ -524,17 +525,17 @@ footer {
     }
 
     /* navbar */
-    nav ul {
+    header nav ul {
         padding: 0;
         display: flex;
     }
-    nav ul li {
+    header nav ul li {
         padding: initial;
         width: 50%;
         padding: 2vw;
         border-bottom: 3px solid var(--secondary-colorb);      
     }
-    nav ul .active-menu {
+    header nav ul .active-menu {
         border-color: var(--main-color);
         border-top: none;
     }
@@ -638,7 +639,7 @@ footer {
     .footer-content {
         margin: 4%;
     }
-    .footer-content div li {
+    .footer-content li {
         font-size: 80%;
         line-height: 2;
     }
