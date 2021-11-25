@@ -1,9 +1,14 @@
+/* 
+
+
+
 /* GENERAL */
 
 * {
     box-sizing: border-box;
 }
-:root {
+
+:root { 
     --backroung-color: #F2F2F2;
     --main-color:#0065FC;
     --secondary-color: #DEEBFF;
@@ -99,8 +104,6 @@ header nav ul .active-menu a {
     color: var(--main-color);
 }
 
-
-
 /* SECTION */
 
 /*search bar*/
@@ -147,8 +150,6 @@ header nav ul .active-menu a {
 }
 
 /*Filters*/
-
-
 
 #filters {
     display: flex;
