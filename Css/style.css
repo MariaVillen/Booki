@@ -93,7 +93,6 @@ header nav ul li {
     display: inline;
     padding-top: 3.542vw; 
 }
-
 header nav ul li a {
     padding: 25px 15px;
 }
@@ -352,6 +351,9 @@ header nav ul .active-menu a {
     font-weight: bolder;
     font-size: 120%;
 }
+#logements .card-footer a:hover {
+    color: var(--main-color);
+}
 
 /* Activites */
 
@@ -403,6 +405,9 @@ footer {
     width: 100%;
     background: #F2F2F2;
     padding: 3%;
+}
+footer a:hover {
+    color: var(--main-color);
 }
 .footer-content {
     display: flex;
