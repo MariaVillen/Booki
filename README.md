@@ -1,7 +1,10 @@
-# P2_VILLEN_MARIA
+# BOOKI
 
 Projet 2 - Formation developpeur web chez Openclassrooms.
 
+Competences évaulées:
+  Intégrer du contenu conformément à une maquette
+  Implémenter une interface responsive
 
 Spécifications fonctionnelles
 ● Les usagers pourront rechercher des hébergements dans la ville de
