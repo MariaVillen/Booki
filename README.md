@@ -4,7 +4,7 @@ Projet 2 - Formation developpeur web chez Openclassrooms.
 <p align = "center"> Booki is a travel booking website</p>
 
 ## Deploy: 
-  https://mariavillen.github.io/P2_VILLEN_MARIA/
+   https://mariavillen.github.io/Booki/
 
 ## Compétences:
 
