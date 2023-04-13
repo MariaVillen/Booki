@@ -8,8 +8,8 @@ Projet 2 - Formation developpeur web chez Openclassrooms.
 
 ## Compétences:
 
-  Intégrer du contenu conformément à une maquette
-  Implémenter une interface responsive
+  - Intégrer du contenu conformément à une maquette
+  - Implémenter une interface responsive
 
 <br/>
 
