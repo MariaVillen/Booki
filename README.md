@@ -1,12 +1,31 @@
 # BOOKI
-
 Projet 2 - Formation developpeur web chez Openclassrooms.
+<p align = "center"> <img src = "https://i85.servimg.com/u/f85/19/88/52/56/booki10.png" /></p>
+<p align = "center"> Booki is a travel booking website</p>
 
-Competences évaulées:
+## Deploy: 
+  https://mariavillen.github.io/P2_VILLEN_MARIA/
+
+## Compétences:
+
   Intégrer du contenu conformément à une maquette
   Implémenter une interface responsive
 
-Spécifications fonctionnelles
+<br/>
+
+## Développé avec: 🛠️
+
+<br/>
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+<br/>
+<br/>
+
+
+## Spécifications fonctionnelles
 ● Les usagers pourront rechercher des hébergements dans la ville de
 leur choix. Le champ de recherche est un champ de saisie, le texte
 doit donc pouvoir être édité par l’utilisateur. Il faut englober ce
@@ -76,4 +95,3 @@ préprocesseur CSS (type Sass ou Less) ne doit être utilisé.
 Google Chrome et de Mozilla Firefox. Il faudra tester le prototype sur
 ces deux navigateurs.
 
-● Le code ne doit pas être versionné avec Git.
